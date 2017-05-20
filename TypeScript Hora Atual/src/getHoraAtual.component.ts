@@ -10,7 +10,10 @@ export class GetHoraAtualComponent {
   agora: String;
 
   constructor(HoraAtualService: HoraAtualService) {
-    HoraAtualService.generateHoraAtual(1000, agora => this.agora = agora);
+    HoraAtualService.generateHoraAtual(1000, agoraParam => this.agora = agoraParam);
   }
 
 }
+
+
+
