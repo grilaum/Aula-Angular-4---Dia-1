@@ -4,9 +4,12 @@
   app.HoraAtualService = Class({
     constructor: function HoraAtualService() {},
     getAgora: function() {
-      var currentdate = new Date; 
+      var currentdate = new Date;
+      var datetime = currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds(); 
       
-      return currentdate;
+      return datetime;
     },
     generateHoraAtual: function(delay, callback) {
       var self = this;
